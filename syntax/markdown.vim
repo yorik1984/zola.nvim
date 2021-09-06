@@ -11,3 +11,4 @@ endif
 let g:loaded_markdown_zola = 1
 
 runtime syntax/zola.vim
+
