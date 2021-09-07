@@ -9,7 +9,7 @@ Using [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax) for [Jinj
 ### 🌟 Features
 + Additions to Markdown highlighting to correctly syntax highlight the front matter in Zola posts.
 
-**Markdown example with Jinja syntax will now highlight correctly**
+**Markdown example with TOML and Jinja syntax will now highlight correctly**
 
 ![example](https://user-images.githubusercontent.com/1559192/132262784-6a3b0191-1b3a-4361-871d-43fcfcea6ff2.png)
 
