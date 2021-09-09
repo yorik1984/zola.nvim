@@ -45,6 +45,18 @@ use {
 
 Just writing zola-markdown files and enjoy by syntax highlighting 😃
 
+```vim
+" init.vim
+lua << EOF 
+    require('zola').setup()
+EOF
+```
+
+```lua
+-- Lua:
+require('zola').setup()
+```
+
 ### ⚙️ Configuration
 
 ```vim
@@ -68,6 +80,7 @@ require('zola').setup({
     mkd_plugins_support = false
 })
 ```
+
 You can enable using included TOML-highlighting into plugins [n]vim-markdown. Technically it do same but have only other delimiters `+++` highlighting.
 In screenshot above you can see this. For `+++` using `markdownH1` highlight group.
 Read more about [vim_markdown_toml_frontmatter](https://github.com/ixru/nvim-markdown#syntax-extensions).
