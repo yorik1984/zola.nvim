@@ -76,7 +76,7 @@ Available options:
 
 | Option              | Default | Description                                                  |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| mkd_plugins_support | `true`  | Enable supporting plugins `nvim-markdown` or `vim-markdown`. Sometimes settings to enable zola syntax with default markdown syntax has conflict with properly working settings with special plugins. Advice: use always `true` and special plugins for more beautiful syntax highlight. "There can only be one"©. |
+| mkd_plugins_support | `true`  | Enable supporting plugins `nvim-markdown` or `vim-markdown`. Sometimes settings for zola-syntax with default markdown syntax has conflict with properly working settings with special plugins. Advice: use always `true` and special plugins for more beautiful syntax highlight. "There can only be one"©. |
 
 
 ### ⛩️  Inspired by:
