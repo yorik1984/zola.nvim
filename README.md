@@ -20,6 +20,9 @@ Using [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax) for [Jinj
 + Neovim >= 0.5.0
 + [vim-toml](https://github.com/cespare/vim-toml)
 + [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax)
++ Optional:
+    - [nvim-markdown](https://github.com/ixru/nvim-markdown) or [vim-markdown](https://github.com/plasticboy/vim-markdown)
+
 
 ### 📦 Installation
 
@@ -28,12 +31,53 @@ Install via your favorite package manager:
 #### [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use {'yorik1984/zola.nvim', requires = {'cespare/vim-toml', 'Glench/Vim-Jinja2-Syntax'}}
+use {
+    "yorik1984/zola.nvim",
+    requires = {
+        "cespare/vim-toml",
+        "Glench/Vim-Jinja2-Syntax",
+        "ixru/nvim-markdown"        -- optional
+    }
+}
 ```
 
 ### 🚀 Usage
 
 Just writing zola-markdown files and enjoy by syntax highlighting 😃
+
+### ⚙️ Configuration
+
+```vim
+" init.vim
+lua << EOF 
+    require('zola').setup({
+        mkd_plugins_support = false
+    })
+EOF
+```
+
+```lua
+-- Lua:
+-- Option from plugin [n]vim-markdown
+vim.g.vim_markdown_toml_frontmatter = 1
+
+vim.g.zola_mkd_plugins_support = false
+
+-- OR better
+require('zola').setup({
+    mkd_plugins_support = false
+})
+```
+You can enable using included TOML-highlighting into plugins [n]vim-markdown. Technically it do same but have only other delimiters `+++` highlighting.
+In screenshot above you can see this. For `+++` using `markdownH1` highlight group.
+Read more about [vim_markdown_toml_frontmatter](https://github.com/ixru/nvim-markdown#syntax-extensions).
+
+Available options:
+
+| Option              | Default | Description                                                  |
+| ------------------- | ------- | ------------------------------------------------------------ |
+| mkd_plugins_support | `true`  | Enable supporting plugins `nvim-markdown` or `vim-markdown`. Sometimes settings to enable zola syntax with default markdown syntax has conflict with properly working settings with special plugins. Advice: use always `true` and special plugins for more beautiful syntax highlight. "There can only be one"©. |
+
 
 ### ⛩️  Inspired by:
 
