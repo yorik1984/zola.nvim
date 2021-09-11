@@ -91,6 +91,23 @@ Available options:
 | ------------------- | ------- | ------------------------------------------------------------ |
 | mkd_plugins_support | `true`  | Enable supporting plugins `nvim-markdown` or `vim-markdown`. Sometimes settings for zola-syntax with default markdown syntax has conflict with properly working settings with special plugins. Advice: use always `true` and special plugins for more beautiful syntax highlight. "There can only be one"©. |
 
+Add autopairs with [nvim-autopairs](https://github.com/windwp/nvim-autopairs):
+
+
+| Before | Insert  |  After    |
+|--------|---------|-----------|
+| `{{┃}}`| `space` | `{{ ┃ }}` |
+| `{%┃}` | `space` | `{% ┃ %}` |
+
+```lua
+local Rule = require('nvim-autopairs.rule')
+local npairs = require('nvim-autopairs')
+
+npairs.add_rules{
+    Rule("{{ "," ",  {"markdown", "jinja.html"}),
+    Rule("{% "," %", {"markdown", "jinja.html"}),
+}
+```
 
 ### ⛩️  Inspired by:
 
