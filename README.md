@@ -2,9 +2,12 @@
 
 ###  W.I.P.🚧
 
-A neovim plugin that helps you write [Zola](https://www.getzola.org/) posts quickly. 
+A Neovim plugin that helps you write [Zola](https://www.getzola.org/) posts quickly. 
 Using [vim-toml](https://github.com/cespare/vim-toml) for [TOML](https://toml.io/en/) syntax highlight.
 Using [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax) for [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) syntax highlight.
+
+Optional:
+- Using [vim-toml](https://github.com/cespare/vim-toml) for [TOML](https://toml.io/en/) syntax highlight for Neovim < 0.6.0 ([717bd87](https://github.com/cespare/vim-toml/commit/2c8983cc391287e5e26e015c3ab9c38de9f9b759))
 
 ### 🌟 Features
 + Additions to Markdown highlighting to correctly syntax highlight the front matter in Zola posts.
@@ -18,10 +21,10 @@ Using [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax) for [Jinj
 ### ⚡️ Requirements
 
 + Neovim >= 0.5.0
-+ [vim-toml](https://github.com/cespare/vim-toml)
 + [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax)
 + Optional:
     - [nvim-markdown](https://github.com/ixru/nvim-markdown) or [vim-markdown](https://github.com/plasticboy/vim-markdown)
+    - for Neovim < 0.6.0  [vim-toml](https://github.com/cespare/vim-toml) ([717bd87](https://github.com/cespare/vim-toml/commit/2c8983cc391287e5e26e015c3ab9c38de9f9b759))
 
 
 ### 📦 Installation
