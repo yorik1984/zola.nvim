@@ -1,19 +1,20 @@
 " Vim syntax file
 " Language: Markdown extended for Zola front matter
 " Maintainer: Yurii Kulchevich <yorik1984@gmail.com>
-" Version: 0.2.0
+" Version: 0.3.0
 " Created: 06.09.2021
-" Last Change: 09.09.2021
-" Usage: Add 'runtime syntax/zola.vim' to your syntax-file
+" Last Change: 17.04.2022
+" Usage: Add 'runtime after/syntax/markdown/zola.vim' to your syntax-file
 
-" add support for formating with vim-markdown or nvim-markdown plugins
+" prefer formatting with vim-markdown or nvim-markdown plugins
+" add own setting without this plugins
 if !exists('g:vim_markdown_toml_frontmatter')
     let b:current_syntax = ''
     unlet b:current_syntax
     syntax include @TOML syntax/toml.vim
     syntax region tomlFrontMatter matchgroup=frontMatter start="\%^[ \t\n\r]*\_^[ \t]*+++[ \t]*$" end="^[ \t]*+++[ \t]*$" contains=@TOML keepend
-     hi link frontMatter markdownH1
-     syntax cluster mkdNonListItem add=tomlFrontMatter
+    hi link frontMatter mkdDelimiter
+    syntax cluster mkdNonListItem add=tomlFrontMatter
 endif
 
 let b:current_syntax = ''
