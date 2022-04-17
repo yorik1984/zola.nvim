@@ -13,7 +13,7 @@ if !exists('g:vim_markdown_toml_frontmatter')
     unlet b:current_syntax
     syntax include @TOML syntax/toml.vim
     syntax region tomlFrontMatter matchgroup=frontMatter start="\%^[ \t\n\r]*\_^[ \t]*+++[ \t]*$" end="^[ \t]*+++[ \t]*$" contains=@TOML keepend
-    hi link frontMatter mkdDelimiter
+    hi link frontMatter markdownHeadingDelimiter
     syntax cluster mkdNonListItem add=tomlFrontMatter
 endif
 
