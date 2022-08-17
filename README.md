@@ -69,7 +69,7 @@ let g:vim_markdown_toml_frontmatter = 1
 vim.g.vim_markdown_toml_frontmatter = 1
 ```
 
-⚠️To enable correct preview in [Telescope](https://github.com/nvim-telescope/telescope.nvim) load zola-plugin before:
+⚠️ To enable correct preview in [Telescope](https://github.com/nvim-telescope/telescope.nvim) load zola plugin before:
 
 ```lua
 use({
