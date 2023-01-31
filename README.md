@@ -16,7 +16,7 @@ Optional:
 
 **Markdown example with TOML and Jinja syntax will now highlight correctly**
 
-There are highlight [example file](preview/jinja.md) with different themes:
+There are highlights [example file](preview/jinja.md) with different themes:
 
 - [newpaper.nvim](https://github.com/yorik1984/newpaper.nvim)
 - [gruvbox-material](https://github.com/sainnhe/gruvbox-material)
@@ -26,25 +26,33 @@ There are highlight [example file](preview/jinja.md) with different themes:
 
 ### ⚡️Requirements
 
-- Neovim ⪖ 0.5.0
+- Neovim ⪖ 0.6.0
 - [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax)
 - Optional:
-  - [nvim-markdown](https://github.com/ixru/nvim-markdown) or [vim-markdown](https://github.com/plasticboy/vim-markdown)
-  - for Neovim ⩽ 0.6.0 [vim-toml](https://github.com/cespare/vim-toml) ([717bd87](https://github.com/cespare/vim-toml/commit/2c8983cc391287e5e26e015c3ab9c38de9f9b759))
+  - for Neovim < 0.6.0 [vim-toml](https://github.com/cespare/vim-toml) ([717bd87](https://github.com/cespare/vim-toml/commit/2c8983cc391287e5e26e015c3ab9c38de9f9b759))
 
 ### 📦 Installation
 
 Install via your favorite package manager:
 
+#### [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+require("lazy").setup({
+    {
+        "yorik1984/zola.nvim",
+        dependencies = "Glench/Vim-Jinja2-Syntax",
+    },
+})
+```
 #### [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
     "yorik1984/zola.nvim",
     requires = {
-        "cespare/vim-toml",
         "Glench/Vim-Jinja2-Syntax",
-        "preservim/vim-markdown"        -- optional
+        "cespare/vim-toml",             -- for Neovim ⩽ 0.6.0
     }
 }
 ```
@@ -54,33 +62,6 @@ use {
 Just install plugin. Write zola-markdown files and enjoy by syntax highlighting 😃
 
 ### ⚙️ Configuration
-
-You can enable included frontmatter TOML-highlighting into plugins [n]vim-markdown. Technically it do same.
-
-```vim
-" init.vim
-" Optional. Using syntax highlight from [n]vim-markdown plugins
-let g:vim_markdown_toml_frontmatter = 1
-```
-
-```lua
--- Lua:
--- Optional. Using syntax highlight from [n]vim-markdown plugins
-vim.g.vim_markdown_toml_frontmatter = 1
-```
-
-⚠️ To enable correct preview in [Telescope](https://github.com/nvim-telescope/telescope.nvim) load zola plugin before:
-
-```lua
-use({
-    "nvim-telescope/telescope.nvim"
-    -- ...
-    after = "zola.nvim",
-    -- ...
-})
-```
-
-Read more about [vim_markdown_toml_frontmatter](https://github.com/ixru/nvim-markdown#syntax-extensions).
 
 Add autopairs with [nvim-autopairs](https://github.com/windwp/nvim-autopairs):
 
