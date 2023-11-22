@@ -45,17 +45,6 @@ require("lazy").setup({
     },
 })
 ```
-#### [packer.nvim](https://github.com/wbthomason/packer.nvim)
-
-```lua
-use {
-    "yorik1984/zola.nvim",
-    requires = {
-        "Glench/Vim-Jinja2-Syntax",
-        "cespare/vim-toml",             -- for Neovim ⩽ 0.6.0
-    }
-}
-```
 
 ### 🚀 Usage
 
